@@ -274,23 +274,23 @@
 										if (marca != "" && modelo != "") { 
 											var url = 'https://wa.me//5514998170330?text=Olá!%20Meu%20nome%20é%20' + encodeURIComponent(nome) 
 											+ '%20e%20meu%20telefone%20é%20' + encodeURIComponent(telefone)
-											+ '.%20Tenho%20um%20carro%20da%20marca%20' + encodeURIComponent(marca) 
+											+ '.%0DTenho%20um%20carro%20da%20marca%20' + encodeURIComponent(marca) 
 											+ '%20e%20modelo%20' + encodeURIComponent(modelo)
-											+ '.%20%20%20%20%20' + encodeURIComponent(mensagem);
+											+ '.%0D%0D' + encodeURIComponent(mensagem);
 										} else if (marca != "" && modelo === "") {
 											var url = 'https://wa.me//5514998170330?text=Olá!%20Meu%20nome%20é%20' + encodeURIComponent(nome) 
 											+ '%20e%20meu%20telefone%20é%20' + encodeURIComponent(telefone)
-											+ '.%20Tenho%20um%20carro%20da%20marca%20' + encodeURIComponent(marca)
-											+ '.%20%20%20%20%20' + encodeURIComponent(mensagem);
+											+ '.%0DTenho%20um%20carro%20da%20marca%20' + encodeURIComponent(marca)
+											+ '.%0D%0D' + encodeURIComponent(mensagem);
 										} else if (marca === "" && modelo != "") {
 											var url = 'https://wa.me//5514998170330?text=Olá!%20Meu%20nome%20é%20' + encodeURIComponent(nome) 
 											+ '%20e%20meu%20telefone%20é%20' + encodeURIComponent(telefone)
-											+ '.%20Tenho%20um%20carro%20da%20modelo%20' + encodeURIComponent(modelo)
-											+ '.%20%20%20%20%20' + encodeURIComponent(mensagem);
+											+ '.%0DTenho%20um%20carro%20da%20modelo%20' + encodeURIComponent(modelo)
+											+ '.%0D%0D' + encodeURIComponent(mensagem);
 										} else {
 											var url = 'https://wa.me//5514998170330?text=Olá!%20Meu%20nome%20é%20' + encodeURIComponent(nome) 
 											+ '%20e%20meu%20telefone%20é%20' + encodeURIComponent(telefone)
-											+ '.%20%20%20%20%20' + encodeURIComponent(mensagem);
+											+ '.%0D%0D' + encodeURIComponent(mensagem);
 										} 
 																		
         	    						// Redirecionando para a URL criada
