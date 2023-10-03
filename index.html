@@ -72,16 +72,43 @@
 				<section class="carousel">
 					<div class="reel">
 
-						<article>
-							<a href="#" class="image featured"><img src="images/alternador.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Alternador</a></h3>
-							</header>
-							<p>O alternador serve para suprir a demanda de eletricidade do veículo e seus acessórios.</p>
+						<article>							
+							<!--<div data-toggle="modal" href="#foo">-->
+								<div class="opener" style="user-select: none; cursor: pointer;">
+									<a class="image featured" href="#"> <!--href="#collapseExample" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample"-->
+										<img src="images/alternador.jpg" alt="" />
+									</a>
+									<header>
+										<h3><a href="#">Alternador</a></h3>
+									</header>
+									<p>O alternador serve para suprir a demanda de eletricidade do veículo e seus acessórios.</p>
+								</div>
+							<!--/div-->
+							<!--<div class="modal fade" id="foo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+								<div class="modal-dialog" role="document">
+								  <div class="modal-content">
+									<div class="modal-header">
+									  <h5 class="modal-title" id="exampleModalLabel">Título do modal</h5>
+									  <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+										<span aria-hidden="true">&times;</span>
+									  </button>
+									</div>
+									<div class="modal-body">
+									  ...
+									</div>
+									<div class="modal-footer">
+									  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+									  <button type="button" class="btn btn-primary">Salvar mudanças</button>
+									</div>
+								  </div>
+								</div>
+							</div>-->
 						</article>
-
+						
 						<article>
-							<a href="#" class="image featured"><img src="images/motordepartida.jpg" alt="" /></a>
+							<a href="#" class="image featured">
+								<img src="images/motordepartida.jpg" alt="" />
+							</a>
 							<header>
 								<h3><a href="#">Motor de Partida</a></h3>
 							</header>
@@ -89,7 +116,9 @@
 						</article>
 
 						<article>
-							<a href="#" class="image featured"><img src="images/bateria.jpg" alt="" /></a>
+							<a href="#" class="image featured">
+								<img src="images/bateria.jpg" alt="" />
+							</a>
 							<header>
 								<h3><a href="#">Bateria</a></h3>
 							</header>
@@ -97,7 +126,9 @@
 						</article>
 
 						<article>
-							<a href="#" class="image featured"><img src="images/lampada.jpg" alt="" /></a>
+							<a href="#" class="image featured">
+								<img src="images/lampada.jpg" alt="" />
+							</a>
 							<header>
 								<h3><a href="#">Troca de Lâmpadas</a></h3>
 							</header>
@@ -105,7 +136,9 @@
 						</article>
 
 						<article>
-							<a href="#" class="image featured"><img src="images/acessorios.jpg" alt="" /></a>
+							<a href="#" class="image featured">
+								<img src="images/acessorios.jpg" alt="" />
+							</a>
 							<header>
 								<h3><a href="#">Troca de Acessórios</a></h3>
 							</header>
@@ -113,7 +146,9 @@
 						</article>
 
 						<article>
-							<a href="#" class="image featured"><img src="images/fios.jpg" alt="" /></a>
+							<a href="#" class="image featured">
+								<img src="images/fios.jpg" alt="" />
+							</a>
 							<header>
 								<h3><a href="#">Conserto de Cabos</a></h3>
 							</header>
@@ -121,7 +156,9 @@
 						</article>
 
 						<article>
-							<a href="#" class="image featured"><img src="images/eletricageral.jpg" alt="" /></a>
+							<a href="#" class="image featured">
+								<img src="images/eletricageral.jpg" alt="" />
+							</a>
 							<header>
 								<h3><a href="#">Elétrica em Geral</a></h3>
 							</header>
@@ -129,7 +166,9 @@
 						</article>
 
 						<article>
-							<a href="#" class="image featured"><img src="images/muitomais.jpg" alt="" /></a>
+							<a href="#" class="image featured">
+								<img src="images/muitomais.jpg" alt="" />
+							</a>
 							<header>
 								<h3><a href="#">E muito mais!</a></h3>
 							</header>
@@ -238,7 +277,20 @@
 									</div>	
 									<div class="col-6">
 										<label for="telefone">Telefone: </label>
-										<input type="text" name="telefone" id="campoTelefone" placeholder="(XX)XXXXX-XXXX" required>
+										<input type="text" name="telefone" id="campoTelefone" maxlength="15" placeholder="(XX)XXXXX-XXXX" required onkeyup="handlePhone(event)">
+										<script>
+											const handlePhone = (event) => {
+												let input = event.target
+												input.value = phoneMask(input.value)
+											}
+											const phoneMask = (value) => {
+												if (!value) return ""
+												value = value.replace(/\D/g,'')
+												value = value.replace(/(\d{2})(\d)/,"($1) $2")
+												value = value.replace(/(\d)(\d{4})$/,"$1-$2")
+												return value
+											}
+										</script>
 									</div>
 								</div>
 							</div>
