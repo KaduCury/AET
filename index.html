@@ -10,7 +10,10 @@
     		<link rel="icon" href="images/bolt-solid.svg" type="image/x-icon">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css"></noscript>
 		<title>Auto Elétrica do Turco</title>
-		<style>.mais{display:none;}</style>
+		<style>.mais{display:none;}
+			dialog {border: none; border-radius: .5rem; box-shadow: 0 0 1em rgba(0, 0, 0, 0.3); width: 60%;}
+			dialog::backdrop {background: rgba(0, 0, 0, 0.7);}
+		</style>
 	</head>
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
@@ -37,19 +40,19 @@
 								<li>
 									<a href="#banner" class="scrolly">Serviços<!--Dropdown--></a>
 									<ul>
-										<li><a href="#">Alternador</a></li>
-										<li><a href="#">Motor de Partida</a></li>
-										<li><a href="#">Bateria</a></li>
+										<li><a href="#article-one" class="scrolly">Alternador</a></li>
+										<li><a href="#article-two" class="scrolly">Motor de Partida</a></li>
+										<li><a href="#article-three" class="scrolly">Bateria</a></li>
 										<li>
-											<a href="#">Outros Serviços<!--And a submenu &hellip;--></a>
+											<a href="#article-seven" class="scrolly">Outros Serviços<!--And a submenu &hellip;--></a>
 											<ul>
-												<li><a href="#">Troca de Lâmpadas</a></li>
-												<li><a href="#">Troca de Acessórios</a></li>
-												<li><a href="#">Troca de Cabos, Fios, etc..</a></li>
-												<li><a href="#">E muito mais!</a></li>
+												<li><a href="#article-four" class="scrolly">Troca de Lâmpadas</a></li>
+												<li><a href="#article-five" class="scrolly">Troca de Acessórios</a></li>
+												<li><a href="#article-six" class="scrolly">Troca de Cabos, Fios, etc..</a></li>
+												<li><a href="#article-eight" class="scrolly">E muito mais!</a></li>
 											</ul>
 										</li>
-										<li><a href="#">Manutenção Elétrica em Geral</a></li>
+										<li><a href="#article-seven" class="scrolly">Manutenção Elétrica em Geral</a></li>
 									</ul>
 								</li>
 								<li><a href="#endereco" class="scrolly">Endereço</a></li>
@@ -69,110 +72,170 @@
 				</section>
 
 			<!-- Carousel -->
+				
 				<section class="carousel">
 					<div class="reel">
 
-						<article>							
-							<!--<div data-toggle="modal" href="#foo">-->
-								<div class="opener" style="user-select: none; cursor: pointer;">
-									<a class="image featured" href="#"> <!--href="#collapseExample" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample"-->
-										<img src="images/alternador.jpg" alt="" />
-									</a>
-									<header>
-										<h3><a href="#">Alternador</a></h3>
-									</header>
-									<p>O alternador serve para suprir a demanda de eletricidade do veículo e seus acessórios.</p>
-								</div>
-							<!--/div-->
-							<!--<div class="modal fade" id="foo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-								<div class="modal-dialog" role="document">
-								  <div class="modal-content">
-									<div class="modal-header">
-									  <h5 class="modal-title" id="exampleModalLabel">Título do modal</h5>
-									  <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-										<span aria-hidden="true">&times;</span>
-									  </button>
-									</div>
-									<div class="modal-body">
-									  ...
-									</div>
-									<div class="modal-footer">
-									  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-									  <button type="button" class="btn btn-primary">Salvar mudanças</button>
-									</div>
-								  </div>
-								</div>
-							</div>-->
+						<article style="cursor: pointer;">
+							<button id="article-one" style="all: inherit;">							
+								<a class="image featured">
+									<img src="images/alternador.jpg" alt="" />
+								</a>
+								<header>
+									<h3><a>Alternador</a></h3>
+								</header>
+								<p><a>O alternador serve para suprir a demanda de eletricidade do veículo e seus acessórios.</a></p>								
+							</button>
+							<!-- Modal -->
+							<dialog id="dialog-one" style="margin-bottom: auto;">
+								<h4>Diagnóstico</h4>
+								<p>Medir a voltagem de saída, a qual deve estar entre 13,5 e 14,5 volts com o motor ligado.</p>
+								<h4>Peças de Reposição</h4>
+								<p>Porta-escovas, Regulador de voltagem, Rotor, Estator...</p>
+								<button id="close-one" style="width: 100%;">X</button>
+							</dialog>						
 						</article>
 						
-						<article>
-							<a href="#" class="image featured">
-								<img src="images/motordepartida.jpg" alt="" />
-							</a>
-							<header>
-								<h3><a href="#">Motor de Partida</a></h3>
-							</header>
-							<p>O motor de partida serve para impulsionar o motor quando esta ainda está parado.</p>
+						<article style="cursor: pointer;">
+							<button id="article-two" style="all: inherit;">
+								<a class="image featured">
+									<img src="images/motordepartida.jpg" alt="" />
+								</a>
+								<header>
+									<h3><a>Motor de Partida</a></h3>
+								</header>
+								<p><a>O motor de partida serve para impulsionar o motor quando esta ainda está parado.</a></p>
+							</button>
+							<!-- Modal -->
+							<dialog id="dialog-two" style="margin-bottom: auto;">
+								<h4>Diagnóstico</h4>
+								<p>Verificar o sistema elétrico (bateria, cabos, relés...), além de avaliar o funcionamento do próprio motor de partida.</p>
+								<h4>Peças de Reposição</h4>
+								<p>Solenóide, Porta-escovas, Bendix e em alguns casos o próprio Motor de partida em si. </p>
+								<button id="close-two" style="width: 100%;">X</button>
+							</dialog>
 						</article>
 
-						<article>
-							<a href="#" class="image featured">
-								<img src="images/bateria.jpg" alt="" />
-							</a>
-							<header>
-								<h3><a href="#">Bateria</a></h3>
-							</header>
-							<p>A bateria do carro serve para dar a partida no veículo e também para alimentar o sistema elétrico.</p>
+						<article style="cursor: pointer;">
+							<button id="article-three" style="all: inherit;">
+								<a class="image featured">
+									<img src="images/bateria.jpg" alt="" />
+								</a>
+								<header>
+									<h3><a>Bateria</a></h3>
+								</header>
+								<p><a>A bateria do carro serve para dar a partida no veículo e também para alimentar o sistema elétrico.</a></p>
+							</button>
+							<!-- Modal -->
+							<dialog id="dialog-three" style="margin-bottom: auto;">
+								<h4>Diagnóstico</h4>
+								<p>Medir a voltagem de saída para determinar a carga e amperagem para determinar capacidade da bateria.</p>
+								<!--<p>Medir a voltagem de saída, a qual deve estar entre 13,5 e 14,5 volts com o motor ligado.</p>-->
+								<h4>Atenção!</h4>
+								<p>Alternador defeituoso, Cabos corroídos ou soltos, e Falhas no sistema de carga e consumo podem danificar a bateria.</p>
+								<!--<p>Porta-escovas, Regulador de voltagem, Rotor, Estator...</p>-->
+								<button id="close-three" style="width: 100%;">X</button>
+							</dialog>
 						</article>
 
-						<article>
-							<a href="#" class="image featured">
-								<img src="images/lampada.jpg" alt="" />
-							</a>
-							<header>
-								<h3><a href="#">Troca de Lâmpadas</a></h3>
-							</header>
-							<p>A lâmpada do carro danificada acarreta em multa de R$127,69 mais cinco pontos na CNH.</p>
+						<article style="cursor: pointer;">
+							<button id="article-four" style="all: inherit;">
+								<a class="image featured">
+									<img src="images/lampada.jpg" alt="" />
+								</a>
+								<header>
+									<h3><a>Troca de Lâmpadas</a></h3>
+								</header>
+								<p><a>A lâmpada do carro danificada acarreta em multa de R$127,69 mais cinco pontos na CNH.</a></p>
+							</button>
+							<!-- Modal -->
+							<dialog id="dialog-four" style="margin-bottom: auto;">
+								<h4>Diagnóstico</h4>
+								<p>Verificar visualmente a lâmpada e componentes elétricos como fusíveis e fiação, além de testar a continuidade do circuito.</p>
+								<!--<p>Medir a voltagem de saída, a qual deve estar entre 13,5 e 14,5 volts com o motor ligado.</p>-->
+								<h4>Atenção!</h4>
+								<p>Uma lâmpada defeituosa pode afetar a segurança do veículo, desde a visibilidade até mesmo pode ocasionar um curto-circuito ou sobrecarga.</p>
+								<!--<p>Porta-escovas, Regulador de voltagem, Rotor, Estator...</p>-->
+								<button id="close-four" style="width: 100%;">X</button>
+							</dialog>
 						</article>
 
-						<article>
-							<a href="#" class="image featured">
-								<img src="images/acessorios.jpg" alt="" />
-							</a>
-							<header>
-								<h3><a href="#">Troca de Acessórios</a></h3>
-							</header>
-							<p>A troca dos acessórios é essencial para evitar desgastes de outros compoonentes.</p>
+						<article style="cursor: pointer;">
+							<button id="article-five" style="all: inherit;">
+								<a class="image featured">
+									<img src="images/acessorios.jpg" alt="" />
+								</a>
+								<header>
+									<h3><a>Troca de Acessórios</a></h3>
+								</header>
+								<p><a>A troca dos acessórios é essencial para evitar desgastes de outros compoonentes.</a></p>
+							</button>
+							<!-- Modal -->
+							<dialog id="dialog-five" style="margin-bottom: auto;">
+								<h4>Diagnóstico</h4>
+								<p>Inspecionar visualmente e fazer testes elétricos para identificar falhas ou mau funcionamento dos componentes.</p>
+								<!--<p>Medir a voltagem de saída, a qual deve estar entre 13,5 e 14,5 volts com o motor ligado.</p>-->
+								<h4>Peças de Reposição</h4>
+								<p>Palhetas do limpador de para-brisas, Buzinas, Tomadas de engate, Alarme, Vidros e Travas elétricas...</p>
+								<!--<p>Porta-escovas, Regulador de voltagem, Rotor, Estator...</p>-->
+								<button id="close-five" style="width: 100%;">X</button>
+							</dialog>
 						</article>
 
-						<article>
-							<a href="#" class="image featured">
-								<img src="images/fios.jpg" alt="" />
-							</a>
-							<header>
-								<h3><a href="#">Conserto de Cabos</a></h3>
-							</header>
-							<p>Um carro popular tem 400 cabos e um premium pode ter mais 800 cabos em sua rede elétrica.</p>
+						<article style="cursor: pointer;">
+							<button id="article-six" style="all: inherit;">
+								<a class="image featured">
+									<img src="images/fios.jpg" alt="" />
+								</a>
+								<header>
+									<h3><a>Conserto de Cabos</a></h3>
+								</header>
+								<p><a>Um carro popular tem 400 cabos e um premium pode ter mais 800 cabos em sua rede elétrica.</a></p>
+							</button>
+							<!-- Modal -->
+							<dialog id="dialog-six" style="margin-bottom: auto;">
+								<h4>Diagnóstico</h4>
+								<p>Inspecionar visualmente além do uso do multímetro para testar a continuidade e resistência elétrica do sistema.</p>
+								<!--<p>Medir a voltagem de saída, a qual deve estar entre 13,5 e 14,5 volts com o motor ligado.</p>-->
+								<h4>Atenção!</h4>
+								<p>O Desgaste, Danos por atrito, Corrosão e Conexões soltas podem levar a mau funcionamento dos sistemas elétricos do veículo.</p>
+								<!--<p>Porta-escovas, Regulador de voltagem, Rotor, Estator...</p>-->
+								<button id="close-six" style="width: 100%;">X</button>
+							</dialog>
 						</article>
 
-						<article>
-							<a href="#" class="image featured">
-								<img src="images/eletricageral.jpg" alt="" />
-							</a>
-							<header>
-								<h3><a href="#">Elétrica em Geral</a></h3>
-							</header>
-							<p>É importante verificar tudo que pode ser medido ou avaliado dos componentes elétricos.</p>
+						<article style="cursor: pointer;">
+							<button id="article-seven" style="all: inherit;">
+								<a class="image featured">
+									<img src="images/eletricageral.jpg" alt="" />
+								</a>
+								<header>
+									<h3><a>Elétrica em Geral</a></h3>
+								</header>
+								<p><a>É importante verificar tudo que pode ser medido ou avaliado dos componentes elétricos.</a></p>
+							</button>
+							<!-- Modal -->
+							<dialog id="dialog-seven" style="margin-bottom: auto;">
+								<h4>Diagnóstico</h4>
+								<p>Geralmente envolve verificar Fusíveis, Cabos, Bateria e Componentes eletrônicos para identificar e corrigir falhas no sistema elétrico.</p>
+								<!--<p>Medir a voltagem de saída, a qual deve estar entre 13,5 e 14,5 volts com o motor ligado.</p>-->
+								<h4>Atenção!</h4>
+								<p>Falta de manutenção elétrica resulta em problemas como falhas na partida, no sistema de iluminação, mau funcionamento de acessórios e até danos a componentes eletrônicos mais sensíveis.</p>
+								<!--<p>Porta-escovas, Regulador de voltagem, Rotor, Estator...</p>-->
+								<button id="close-seven" style="width: 100%;">X</button>
+							</dialog>							
 						</article>
 
-						<article>
-							<a href="#" class="image featured">
-								<img src="images/muitomais.jpg" alt="" />
-							</a>
-							<header>
-								<h3><a href="#">E muito mais!</a></h3>
-							</header>
-							<p>Venha nos conhecer! Faça-nos uma visita! Estamos sempre a disposição para lhe bem atender!</p>
+						<article style="cursor: pointer;">
+							<button id="article-eight" style="all: inherit;">
+								<a href="#endereco" class="image featured" class="scrolly">
+									<img src="images/muitomais.jpg" alt="" />
+								</a>
+								<header>
+									<h3><a href="#endereco" class="scrolly">E muito mais!</a></h3>
+								</header>
+								<p><a href="#endereco" class="scrolly">Venha nos conhecer! Faça-nos uma visita! Estamos sempre a disposição para lhe bem atender!</a></p>
+							</button>
 						</article>
 						
 					</div>
@@ -186,7 +249,7 @@
 							width="100%" style="border:0; height:50vh" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 						</a>
 						<header>
-							<h2 style="margin-bottom: 1em;"><a href="https://maps.app.goo.gl/qmiQGgLFV2yeXSPq5">Nossa Localização</a></h2>
+							<h2 style="margin-bottom: 1em;"><a href="https://maps.app.goo.gl/qmiQGgLFV2yeXSPq5" target="_blank">Nossa Localização</a></h2>
 							<p>
 								Estamos atendendo na <strong>Rua dos Andradas, nº.7-33, Vila Falcão, Bauru/SP.</strong>
 							</p>
@@ -200,11 +263,11 @@
 
 				<div class="wrapper style2">
 					<article id="sobre" class="container special">
-						<a href="#" class="image featured" style="display: flex; justify-content: center; margin-top: 1em; margin-bottom: 2em;">
+						<a href="#h2SobreNos" class="scrolly" class="image featured" style="display: flex; justify-content: center; margin-top: 1em; margin-bottom: 2em;">
 							<img class="image featured" src="images/sobre.jpeg" alt="" style="height:50vh; width:50%;"/>
 						</a>
 						<header>
-							<h2>Sobre Nós</h2>
+							<h2 id="h2SobreNos">Sobre Nós</h2>
 							<p>
 								<strong>Visite-nos</strong> hoje mesmo e experimente o <strong>atendimento diferenciado</strong> que nos tornou <strong>referência na região.</strong>
 							</p>
@@ -214,7 +277,7 @@
 							Nosso compromisso com a excelência e a satisfação do cliente nos tornou uma das melhores auto elétricas da região.<br><br>
 							Contamos com uma equipe de profissionais experientes e qualificados que possuem conhecimento técnico avançado em 
 							diagnóstico e conserto de problemas em sistemas elétricos automotivos.<span id="pontos">..</span>
-							<span class="mais"> Além disso, investimos constantemente em tecnologia e equipamentos de última geração para garantir 
+							<span class="mais" id="plus"> Além disso, investimos constantemente em tecnologia e equipamentos de última geração para garantir 
 								a precisão e a rapidez em nossos serviços.</span><br><br>
 								<span class="mais"> Na Auto Elétrica do Turco, oferecemos uma ampla gama de serviços, desde manutenções preventivas até reparos complexos. 
 								Entre outros serviços, temos disponíveis:</span><br>
@@ -233,7 +296,9 @@
 								Aguardamos sua visita!</span>
 						</p>
 						<footer style="margin-top: 0;">
-							<button id="btnLeiaMais" style="width: 100%; padding: 1.3em 6em 1.3em 6em; font-weight: bold;" onclick="leiaMais()">Leia Mais</button>
+							<a href="#plus" class="scrolly">
+								<button id="btnLeiaMais" style="width: 100%; padding: 1.3em 6em 1.3em 6em; font-weight: bold;" onclick="leiaMais()">Leia Mais</button>
+							</a>
 						</footer>
 						<script>
 							function leiaMais() {
@@ -353,176 +418,65 @@
 				</div>
 
 			<!-- Footer -->
-				<div id="footer">
-					<!--<div class="container">
-						<div class="row">
-
-							 Tweets -->
-								<!--<section class="col-4 col-12-mobile">
-									<header>
-										<a href="https://wa.me//5514998170330" target="_blank"><h2 class="icon brands fa-whatsapp circled"><span class="label">Tweets</span></h2></a>
-									</header>
-									<ul class="divided">
-										<li>
-											<article class="tweet">
-												Amet nullam fringilla nibh nulla convallis tique ante sociis accumsan.
-												<span class="timestamp">5 minutes ago</span>
-											</article>
-										</li>
-										<li>
-											<article class="tweet">
-												Hendrerit rutrum quisque.
-												<span class="timestamp">30 minutes ago</span>
-											</article>
-										</li>
-										<li>
-											<article class="tweet">
-												Curabitur donec nulla massa laoreet nibh. Lorem praesent montes.
-												<span class="timestamp">3 hours ago</span>
-											</article>
-										</li>
-										<li>
-											<article class="tweet">
-												Lacus natoque cras rhoncus curae dignissim ultricies. Convallis orci aliquet.
-												<span class="timestamp">5 hours ago</span>
-											</article>
-										</li>
-									</ul>
-								</section>-->
-
-							<!-- Posts -->
-								<!--<section class="col-4 col-12-mobile">
-									<header>
-										<a href="https://maps.app.goo.gl/LFuohUVXChkkRvv78" target="_blank"><h2 class="icon solid fa-map circled"><span class="label">Posts</span></h2></a>
-									</header>
-									<ul class="divided">
-										<li>
-											<article class="post stub">
-												<header>
-													<h3><a href="#">Nisl fermentum integer</a></h3>
-												</header>
-												<span class="timestamp">3 hours ago</span>
-											</article>
-										</li>
-										<li>
-											<article class="post stub">
-												<header>
-													<h3><a href="#">Phasellus portitor lorem</a></h3>
-												</header>
-												<span class="timestamp">6 hours ago</span>
-											</article>
-										</li>
-										<li>
-											<article class="post stub">
-												<header>
-													<h3><a href="#">Magna tempus consequat</a></h3>
-												</header>
-												<span class="timestamp">Yesterday</span>
-											</article>
-										</li>
-										<li>
-											<article class="post stub">
-												<header>
-													<h3><a href="#">Feugiat lorem ipsum</a></h3>
-												</header>
-												<span class="timestamp">2 days ago</span>
-											</article>
-										</li>
-									</ul>
-								</section>-->
-
-							<!-- Photos -->
-								<!--<section class="col-4 col-12-mobile">
-									<header>
-										<a href="tel:+5514998170330" target="_blank"><h2 class="icon solid fa-phone circled"><span class="label">Photos</span></h2></a>
-									</header>
-									<div class="row gtr-25">
-										<div class="col-6">
-											<a href="#" class="image fit"><img src="images/pic10.jpg" alt="" /></a>
-										</div>
-										<div class="col-6">
-											<a href="#" class="image fit"><img src="images/pic11.jpg" alt="" /></a>
-										</div>
-										<div class="col-6">
-											<a href="#" class="image fit"><img src="images/pic12.jpg" alt="" /></a>
-										</div>
-										<div class="col-6">
-											<a href="#" class="image fit"><img src="images/pic13.jpg" alt="" /></a>
-										</div>
-										<div class="col-6">
-											<a href="#" class="image fit"><img src="images/pic14.jpg" alt="" /></a>
-										</div>
-										<div class="col-6">
-											<a href="#" class="image fit"><img src="images/pic15.jpg" alt="" /></a>
-										</div>
-									</div>
-								</section>
-
-						</div>-->
-						<hr />
-						<div class="row">
-							<div class="col-12">
-
-								<!-- Contact -->
-									<section class="contact">
-										<header>
-											<h3>Ainda lhe resta alguma dúvida?</h3>
-										</header>
-										<p>Em caso positivo entre em contato através dos ícones abaixo, ou ligue <a href="tel:+551432243900" target="_blank">(14)3224-3900</a>.
-										<br>Agradecemos a sua visita!</p>
-										<ul class="icons">
-											<li><a href="tel:+5514998170330" target="_blank" class="icon solid fa-phone"><span class="label">Ligar</span></a></li>
-											<li><a href="https://maps.app.goo.gl/LFuohUVXChkkRvv78" target="_blank" class="icon solid fa-map"><span class="label">Maps</span></a></li>
-											<li><a href="https://wa.me//5514998170330" target="_blank" class="icon brands fa-whatsapp"><span class="label">WhatsApp</span></a></li>
-											<li><a href="https://youtube.com/@rudimarcarelli832?si=WizvvTZNTgiufYrS" target="_blank" class="icon brands fa-youtube"><span class="label">Youtube</span></a></li>
-											<!--<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-											<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>-->
-										</ul>
-									</section>
-
-								<!-- Copyright -->
-									<div class="copyright">
-										<ul class="menu">
-											<li style="font-weight: bold; color: rgba(143, 0, 0, 0.7); text-align: end;">&copy; Auto Elétrica do Turco. All rights reserved. <br><br><br> Designed by:  </li>
-											<!--li style="font-weight: bold; color: rgba(143, 0, 0, 0.7);">Designed by: </li-->
-											<li style="text-align: start;">	
-												<a href="https://api.whatsapp.com/send/?phone=5514988124334&text=Olá!%20Vi%20o%20site%20que%20você%20desenvolveu%20para%20a%20Auto%20Elétrica%20do%20Turco!%20&app_absent=0" 
-												target="_blank">
-													
-													<span class="label" style="margin: 0 auto; display: block; border: 5px solid rgba(143, 0, 0, 0.7); border-radius: 50%; height: 48px; width: 48px;
+			<div id="footer">
+				<hr />
+				<div class="row">
+					<div class="col-12">
+						<!-- Contact -->
+						<section class="contact">
+							<header>
+								<h3>Ainda lhe resta alguma dúvida?</h3>
+							</header>
+							<p>Em caso positivo entre em contato através dos ícones abaixo, ou ligue <a href="tel:+551432243900" target="_blank">(14)3224-3900</a>.
+							<br>Agradecemos a sua visita!</p>
+							<ul class="icons">
+								<li><a href="tel:+5514998170330" target="_blank" class="icon solid fa-phone"><span class="label">Ligar</span></a></li>
+								<li><a href="https://maps.app.goo.gl/LFuohUVXChkkRvv78" target="_blank" class="icon solid fa-map"><span class="label">Maps</span></a></li>
+								<li><a href="https://wa.me//5514998170330" target="_blank" class="icon brands fa-whatsapp"><span class="label">WhatsApp</span></a></li>
+								<li><a href="https://youtube.com/@rudimarcarelli832?si=WizvvTZNTgiufYrS" target="_blank" class="icon brands fa-youtube"><span class="label">Youtube</span></a></li>
+								<!--<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+								<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>-->
+							</ul>
+						</section>
+						<!-- Copyright -->
+						<div class="copyright">
+							<ul class="menu">
+								<li style="font-weight: bold; color: rgba(143, 0, 0, 0.7); text-align: end;">&copy; Auto Elétrica do Turco. All rights reserved. <br><br><br> Designed by:  </li>
+								<!--li style="font-weight: bold; color: rgba(143, 0, 0, 0.7);">Designed by: </li-->
+								<li style="text-align: start;">	
+									<a href="https://api.whatsapp.com/send/?phone=5514988124334&text=Olá!%20Vi%20o%20site%20que%20você%20desenvolveu%20para%20a%20Auto%20Elétrica%20do%20Turco!%20&app_absent=0" 
+									target="_blank">
+												
+										<span class="label" style="margin: 0 auto; display: block; border: 5px solid rgba(143, 0, 0, 0.7); border-radius: 50%; height: 48px; width: 48px;
+										display: flex;	justify-content: center; align-items: center;">
+											<span class="label" style="margin: 0 auto; display: block; border: 5px solid rgba(255, 255, 255); border-radius: 50%; height: 45px; width: 45px;
+											display: flex;	justify-content: center; align-items: center;">
+												<span class="label" style="margin: 0 auto; display: block; border: 5px solid rgba(143, 0, 0, 0.7); border-radius: 50%; height: 42px; width: 42px;
+												display: flex;	justify-content: center; align-items: center;">
+													<span class="label" style="margin: 0 auto; display: block; border: 5px solid rgb(255, 255, 255); border-radius: 50%; height: 39px; width: 39px;
 													display: flex;	justify-content: center; align-items: center;">
-														<span class="label" style="margin: 0 auto; display: block; border: 5px solid rgba(255, 255, 255); border-radius: 50%; height: 45px; width: 45px;
+														<span class="label" style="margin: 0 auto; display: block; border: 5px solid rgba(143, 0, 0, 0.7); border-radius: 50%; height: 36px; width: 36px;
 														display: flex;	justify-content: center; align-items: center;">
-															<span class="label" style="margin: 0 auto; display: block; border: 5px solid rgba(143, 0, 0, 0.7); border-radius: 50%; height: 42px; width: 42px;
-															display: flex;	justify-content: center; align-items: center;">
-																<span class="label" style="margin: 0 auto; display: block; border: 5px solid rgb(255, 255, 255); border-radius: 50%; height: 39px; width: 39px;
-																display: flex;	justify-content: center; align-items: center;">
-																	<span class="label" style="margin: 0 auto; display: block; border: 5px solid rgba(143, 0, 0, 0.7); border-radius: 50%; height: 36px; width: 36px;
-																	display: flex;	justify-content: center; align-items: center;">
-																		<img src="images/profile02.jpg" alt="" srcset="" style="margin: 0 auto; border-radius: 50%; width: 32px; height: 32px; align-items: baseline;">
-																	</span>
-																</span>
-															</span>
+															<img src="images/profile02.jpg" alt="" srcset="" style="margin: 0 auto; border-radius: 50%; width: 32px; height: 32px; align-items: baseline;">
 														</span>
 													</span>
-												</a>
-											
-												<a href="https://api.whatsapp.com/send/?phone=5514988124334&text=Olá!%20Vi%20o%20site%20que%20você%20desenvolveu%20para%20a%20Auto%20Elétrica%20do%20Turco!%20&app_absent=0"
-												 target="_blank"
-												  style="font-weight: bold; color: rgba(143, 0, 0, 0.7);"
-												>
-													Kadu Cury
-												</a>
-											</li>
-										</ul>
-									</div>
-
-							</div>
-
+												</span>
+											</span>
+										</span>
+									</a>
+										
+									<a href="https://api.whatsapp.com/send/?phone=5514988124334&text=Olá!%20Vi%20o%20site%20que%20você%20desenvolveu%20para%20a%20Auto%20Elétrica%20do%20Turco!%20&app_absent=0"
+									 target="_blank"
+									  style="font-weight: bold; color: rgba(143, 0, 0, 0.7);"
+									>
+										Kadu Cury
+									</a>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
-
+			</div>
 		</div>
 
 		<!-- Scripts -->
@@ -534,6 +488,34 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script>
+				var modalOne = document.getElementById('dialog-one'); var openModalOne = document.getElementById('article-one'); var buttonCloseOne = document.getElementById('close-one');
+				openModalOne.onclick = function() {modalOne.showModal();}
+				buttonCloseOne.onclick = function() {modalOne.close();};
+ 
+				var modalTwo = document.getElementById('dialog-two'); var openModalTwo = document.getElementById('article-two'); var buttonCloseTwo = document.getElementById('close-two');
+				openModalTwo.onclick = function() {modalTwo.showModal();}
+				buttonCloseTwo.onclick = function() {modalTwo.close();};
+ 
+				var modalThree = document.getElementById('dialog-three'); var openModalThree = document.getElementById('article-three'); var buttonCloseThree = document.getElementById('close-three');
+				openModalThree.onclick = function() {modalThree.showModal();}
+				buttonCloseThree.onclick = function() {modalThree.close();};
+ 
+				var modalFour = document.getElementById('dialog-four'); var openModalFour = document.getElementById('article-four'); var buttonCloseFour = document.getElementById('close-four');
+				openModalFour.onclick = function() {modalFour.showModal();}
+				buttonCloseFour.onclick = function() {modalFour.close();};
+ 
+				var modalFive = document.getElementById('dialog-five'); var openModalFive = document.getElementById('article-five'); var buttonCloseFive = document.getElementById('close-five');
+				openModalFive.onclick = function() {modalFive.showModal();}
+				buttonCloseFive.onclick = function() {modalFive.close();};
+ 
+				var modalSix = document.getElementById('dialog-six'); var openModalSix = document.getElementById('article-six'); var buttonCloseSix = document.getElementById('close-six');
+				openModalSix.onclick = function() {modalSix.showModal();}
+				buttonCloseSix.onclick = function() {modalSix.close();};
+ 
+				var modalSeven = document.getElementById('dialog-seven'); var openModalSeven = document.getElementById('article-seven'); var buttonCloseSeven = document.getElementById('close-seven');
+				openModalSeven.onclick = function() {modalSeven.showModal();}
+				buttonCloseSeven.onclick = function() {modalSeven.close();};
+			</script>
 	</body>
 </html>
