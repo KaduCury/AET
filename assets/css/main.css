@@ -2277,7 +2277,8 @@ input, select, textarea {
 /* Nav */
 
 	#nav {
-		position: absolute;
+		position: fixed; 
+		background-color: rgba(69, 69, 69, 0.3);
 		top: 0;
 		left: 0;
 		width: 100%;
@@ -2286,6 +2287,7 @@ input, select, textarea {
 		padding: 1.5em 0 1.5em 0;
 		z-index: 1;
 		overflow: hidden;
+		transition: all ease 0.9s;
 	}
 
 		#nav > ul {
@@ -2344,6 +2346,10 @@ input, select, textarea {
 					outline: 0;
 				}
 
+				#nav > ul > li > a:hover{
+					color: #fff;
+				}
+
 				#nav > ul > li > ul {
 					display: none;
 				}
@@ -2400,6 +2406,17 @@ input, select, textarea {
 				border-left: solid 0.75em rgba(64, 64, 64, 0);
 				border-right: solid 0.75em rgba(64, 64, 64, 0);
 			}
+
+	.animate{
+		padding: 1em 0 1em 0 !important;
+		transition: all ease 0.9s !important;
+		background-color: rgba(69, 69, 69, 0.98) !important;
+		color: #ffb300 !important;	
+	}
+
+	.animate ul > li > a:hover{
+		color: #fff !important;
+	}
 
 /* Banner */
 

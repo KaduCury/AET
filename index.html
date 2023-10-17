@@ -34,7 +34,7 @@
 						</div>
 
 					<!-- Nav -->
-						<nav id="nav" style="position: fixed; background-color: rgba(69, 69, 69, 0.6)">
+						<nav id="nav">
 							<ul>
 								<li><a href="index.html">Home</a></li>
 								<li>
@@ -479,6 +479,16 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script>
+				// Toggle Animation by Class
+				$(window).scroll(function(){
+  					if($(document).scrollTop() > 800){
+  					  $('nav').addClass('animate');
+  					}else{
+  					  $('nav').removeClass('animate');
+  					}
+				})
+
+				// Modal Engine
 				var modalOne = document.getElementById('dialog-one'); var openModalOne = document.getElementById('article-one'); var buttonCloseOne = document.getElementById('close-one');
 				openModalOne.onclick = function() {modalOne.showModal();}
 				buttonCloseOne.onclick = function() {modalOne.close();};
