@@ -325,7 +325,7 @@
 								Não se esqueça de preencher todos os dados necessários corretamente para entrarmos em contato!
 							</p>
 						</header>
-						<form id="formToWhatsApp">
+						<form id="formToWhatsApp" method="post" onsubmit="return submitUserForm();">
 							<div class="container" style="margin-bottom: 1em;">
 								<div class="row">
 									<div class="col-6">	
@@ -365,9 +365,25 @@
 							</div>
 							<label for="mensagem">Escreva sua mensagem: </label>
 							<textarea name="mensagem" id="campoMensagem" placeholder="Escreva sua mensagem aqui..."></textarea>
-							<div class="g-recaptcha" data-sitekey="6Lc9j6soAAAAAES1ft1WwdFWDgpO2MlKokD4sTrh"></div>
+							<div class="g-recaptcha" data-sitekey="6Lc9j6soAAAAAES1ft1WwdFWDgpO2MlKokD4sTrh" data-callback="verifyCaptcha"></div>
+							<div id="g-recaptcha-error"></div>
 							<input type="submit" value="Enviar!" style="width: 100%; font-weight: bold;">							
 							<script>
+								//Recaptcha Engine
+								function submitUserForm() {
+									var response = grecaptcha.getResponse();
+									if(response.length == 0) {
+										document.getElementById('g-recaptcha-error').innerHTML = '<span style="color: red;">This field is required.</span>';
+										return false;
+									}
+									return true;
+								}
+
+								function verifyCaptcha() {
+									document.getElementById('g-recaptcha-error').innerHTML = '';
+								}
+
+								//Criador URL para WhatsApp
 								document.getElementById('formToWhatsApp').addEventListener('submit', function(event) {
         	    						event.preventDefault(); // Previne o envio do formulário padrão
 								
