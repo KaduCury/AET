@@ -10,6 +10,11 @@
     		<link rel="icon" href="images/bolt-solid.svg" type="image/x-icon">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css"></noscript>
 		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+		<script>
+			function onSubmit(token) {
+			  document.getElementById("formToWhatsApp").submit();
+			}
+		  </script>
 		<title>Auto Elétrica do Turco</title>
 		<style>.mais{display:none;}
 			dialog {border: none; border-radius: .5rem; box-shadow: 0 0 1em rgba(0, 0, 0, 0.3); width: 60%;}
@@ -325,7 +330,7 @@
 								Não se esqueça de preencher todos os dados necessários corretamente para entrarmos em contato!
 							</p>
 						</header>
-						<form id="formToWhatsApp">
+						<form id="formToWhatsApp" action="?" method="POST">
 							<div class="container" style="margin-bottom: 1em;">
 								<div class="row">
 									<div class="col-6">	
@@ -366,7 +371,7 @@
 							<label for="mensagem">Escreva sua mensagem: </label>
 							<textarea name="mensagem" id="campoMensagem" placeholder="Escreva sua mensagem aqui..."></textarea>
 							<div class="g-recaptcha" data-sitekey="6Lc9j6soAAAAAES1ft1WwdFWDgpO2MlKokD4sTrh"></div>
-							<input type="submit" value="Enviar!" style="width: 100%; font-weight: bold;">							
+							<input class="g-recaptcha" data-sitekey="6Lc9j6soAAAAAES1ft1WwdFWDgpO2MlKokD4sTrh" data-callback="onSubmit" type="submit" value="Enviar!" style="width: 100%; font-weight: bold;">							
 							<script>
 								document.getElementById('formToWhatsApp').addEventListener('submit', function(event) {
         	    						event.preventDefault(); // Previne o envio do formulário padrão
