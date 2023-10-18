@@ -73,7 +73,7 @@
 					</header>
 				</section>
 
-			<!-- Carousel -->
+			<!-- Carousel/Services -->
 				
 				<section class="carousel">
 					<div class="reel">
@@ -88,7 +88,7 @@
 								</header>
 								<p><a>O alternador serve para suprir a demanda de eletricidade para o veículo e dos seus acessórios.</a></p>								
 							</button>
-							<!-- Modal -->
+							<!-- Modal 1 -->
 							<dialog id="dialog-one" style="margin-bottom: auto;">
 								<h4>Diagnóstico</h4>
 								<p>Medir a voltagem de saída, a qual deve estar entre 13,5 e 14,5 volts com o motor ligado.</p>
@@ -108,7 +108,7 @@
 								</header>
 								<p><a>O motor de partida serve para iniciar o funcionamento do motor quando ainda está desligado.</a></p>
 							</button>
-							<!-- Modal -->
+							<!-- Modal 2 -->
 							<dialog id="dialog-two" style="margin-bottom: auto;">
 								<h4>Diagnóstico</h4>
 								<p>Verificar o sistema elétrico (bateria, cabos, relés...), além de avaliar o funcionamento do próprio motor de partida.</p>
@@ -128,7 +128,7 @@
 								</header>
 								<p><a>A bateria do carro serve para dar a partida no veículo e também para alimentar o sistema elétrico.</a></p>
 							</button>
-							<!-- Modal -->
+							<!-- Modal 3 -->
 							<dialog id="dialog-three" style="margin-bottom: auto;">
 								<h4>Diagnóstico</h4>
 								<p>Medir a voltagem de saída para determinar a carga e amperagem para determinar capacidade da bateria.</p>
@@ -148,7 +148,7 @@
 								</header>
 								<p><a>A lâmpada do carro danificada acarreta em multa de R$127,69 mais cinco pontos na CNH.</a></p>
 							</button>
-							<!-- Modal -->
+							<!-- Modal 4 -->
 							<dialog id="dialog-four" style="margin-bottom: auto;">
 								<h4>Diagnóstico</h4>
 								<p>Verificar visualmente a lâmpada e componentes elétricos como fusíveis e fiação, além de testar a continuidade do circuito.</p>
@@ -168,7 +168,7 @@
 								</header>
 								<p><a>A troca dos acessórios é essencial para evitar desgastes de outros componentes.</a></p>
 							</button>
-							<!-- Modal -->
+							<!-- Modal 5 -->
 							<dialog id="dialog-five" style="margin-bottom: auto;">
 								<h4>Diagnóstico</h4>
 								<p>Inspecionar visualmente e fazer testes elétricos para identificar falhas ou mau funcionamento dos componentes.</p>
@@ -188,7 +188,7 @@
 								</header>
 								<p><a>Um carro popular tem 400 cabos e um premium pode ter mais 800 cabos em sua rede elétrica.</a></p>
 							</button>
-							<!-- Modal -->
+							<!-- Modal 6 -->
 							<dialog id="dialog-six" style="margin-bottom: auto;">
 								<h4>Diagnóstico</h4>
 								<p>Inspecionar visualmente além do uso do multímetro para testar a continuidade e resistência elétrica do sistema.</p>
@@ -208,7 +208,7 @@
 								</header>
 								<p><a>É importante verificar tudo que pode ser medido ou avaliado para boa atuação dos itens elétricos.</a></p>
 							</button>
-							<!-- Modal -->
+							<!-- Modal 7 -->
 							<dialog id="dialog-seven" style="margin-bottom: auto;">
 								<h4>Diagnóstico</h4>
 								<p>Geralmente envolve verificar Fusíveis, Cabos, Bateria e Componentes eletrônicos para identificar e corrigir falhas no sistema elétrico.</p>
@@ -233,7 +233,7 @@
 					</div>
 				</section>
 
-			<!-- Main -->
+			<!-- Main/Address -->
 				<div class="wrapper style2">
 					<article id="endereco" class="container special">
 						<a href="#" class="image featured" style="display: flex; margin-top: 1em; margin-bottom: 2em;">
@@ -316,7 +316,7 @@
 					</article>
 				</div>
 
-			<!-- Features -->
+			<!-- Features/Form -->
 				<div class="wrapper style1">
 					<section id="contato" class="container special">
 						<header>
@@ -325,7 +325,7 @@
 								Não se esqueça de preencher todos os dados necessários corretamente para entrarmos em contato!
 							</p>
 						</header>
-						<form id="formToWhatsApp" method="post" onsubmit="return submitUserForm();">
+						<form id="formToWhatsApp">
 							<div class="container" style="margin-bottom: 1em;">
 								<div class="row">
 									<div class="col-6">	
@@ -365,25 +365,11 @@
 							</div>
 							<label for="mensagem">Escreva sua mensagem: </label>
 							<textarea name="mensagem" id="campoMensagem" placeholder="Escreva sua mensagem aqui..."></textarea>
-							<div class="g-recaptcha" data-sitekey="6Lc9j6soAAAAAES1ft1WwdFWDgpO2MlKokD4sTrh" data-callback="verifyCaptcha"></div>
-							<div id="g-recaptcha-error"></div>
+							<div class="g-recaptcha" data-sitekey="6Lc9j6soAAAAAES1ft1WwdFWDgpO2MlKokD4sTrh" data-callback="onSubmit"></div>
 							<input type="submit" value="Enviar!" style="width: 100%; font-weight: bold;">							
 							<script>
-								//Recaptcha Engine
-								function submitUserForm() {
-									var response = grecaptcha.getResponse();
-									if(response.length == 0) {
-										document.getElementById('g-recaptcha-error').innerHTML = '<span style="color: red;">This field is required.</span>';
-										return false;
-									}
-									return true;
-								}
+								grecaptcha.execute();
 
-								function verifyCaptcha() {
-									document.getElementById('g-recaptcha-error').innerHTML = '';
-								}
-
-								//Criador URL para WhatsApp
 								document.getElementById('formToWhatsApp').addEventListener('submit', function(event) {
         	    						event.preventDefault(); // Previne o envio do formulário padrão
 								
@@ -450,8 +436,7 @@
 						<!-- Copyright -->
 						<div class="copyright">
 							<ul class="menu">
-								<li style="font-weight: bold; color: rgba(143, 0, 0, 0.7); text-align: end;">&copy; Auto Elétrica do Turco. All rights reserved. <br><br><br> Designed by:  </li>
-								<!--li style="font-weight: bold; color: rgba(143, 0, 0, 0.7);">Designed by: </li-->
+								<li style="font-weight: bold; color: rgba(143, 0, 0, 0.7); text-align: end;">&copy; Auto Elétrica do Turco. All rights reserved. <br><br><br> Designed by:  </li>								
 								<li style="text-align: start;">	
 									<a href="https://api.whatsapp.com/send/?phone=5514988124334&text=Olá!%20Vi%20o%20site%20que%20você%20desenvolveu%20para%20a%20Auto%20Elétrica%20do%20Turco!%20&app_absent=0" 
 									target="_blank">
@@ -498,7 +483,7 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script>
-				// Toggle Animation by Class
+				// Navbar Toggle Animation by Class
 				$(window).scroll(function(){
   					if($(document).scrollTop() > 800){
   					  $('nav').addClass('animate');
