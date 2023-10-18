@@ -11,10 +11,31 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css"></noscript>
 		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 		<title>Auto Elétrica do Turco</title>
-		<style>.mais{display:none;}
-			dialog {border: none; border-radius: .5rem; box-shadow: 0 0 1em rgba(0, 0, 0, 0.3); width: 60%;}
+		<style>			
+			#innerButton {color: #000;}
 			dialog::backdrop {background: rgba(0, 0, 0, 0.7);}
-			div.g-recaptcha div{margin: 1em auto;} 
+			dialog {border: none; border-radius: .5rem; box-shadow: 0 0 1em rgba(0, 0, 0, 0.3); width: 60%; margin-bottom: auto !important;}
+			#article-one, #article-two, #article-three, #article-four, #article-five, #article-six, #article-seven, #article-eight {
+				all: inherit; height: 100%; width: 100%; cursor: pointer;
+			}
+			#close-one, #close-two, #close-three, #close-four, #close-five, #close-six, #close-seven {
+				width: 100%;
+			}
+			#localH2 {margin-bottom: 1em;}
+			#horarioP {text-align: center;}
+			#sobreNosA {display: flex; justify-content: center; margin-top: 1em; margin-bottom: 2em;}
+			#sobreNosImg {height:50vh; width:50%;}
+			#sobreNosP {margin-bottom: 0;}
+			.mais{display:none;}
+			#maisUl {list-style: inside;}
+			#maisFooter {margin-top: 0;}
+			#btnLeiaMais {width: 100%; padding: 1.3em 6em 1.3em 6em; font-weight: bold;}
+			.containerForm {margin-bottom: 1em;}
+			#formButton {width: 100%; font-weight: bold;}
+			div.g-recaptcha div {margin: 1em auto;}
+			#copyAET {font-weight: bold; color: rgba(143, 0, 0, 0.7); text-align: end;}
+			#copyKadu {text-align: start;}
+			#copyNome {font-weight: bold; color: rgba(143, 0, 0, 0.7)!important;}
 		</style>
 	</head>
 	<body class="homepage is-preload">
@@ -31,7 +52,7 @@
 								<p>Tradição e excelência há mais de 40 anos te atendendo!</p>
 							</header>
 							<footer>
-								<a href="#banner" class="button circled scrolly"><i class="fa-solid fa-bolt" style="color: #000;"></i></a>
+								<a href="#banner" class="button circled scrolly"><i class="fa-solid fa-bolt" id="innerButton"></i></a>
 							</footer>
 						</div>
 
@@ -78,8 +99,8 @@
 				<section class="carousel">
 					<div class="reel">
 
-						<article style="cursor: pointer;">
-							<button id="article-one" style="all: inherit; height: 100%; width: 100%;">							
+						<article>
+							<button id="article-one">							
 								<a class="image featured">
 									<img src="images/alternador.jpg" alt=""/>
 								</a>
@@ -89,17 +110,17 @@
 								<p><a>O alternador serve para suprir a demanda de eletricidade para o veículo e dos seus acessórios.</a></p>								
 							</button>
 							<!-- Modal 1 -->
-							<dialog id="dialog-one" style="margin-bottom: auto;">
+							<dialog id="dialog-one">
 								<h4>Diagnóstico</h4>
 								<p>Medir a voltagem de saída, a qual deve estar entre 13,5 e 14,5 volts com o motor ligado.</p>
 								<h4>Peças de Reposição</h4>
 								<p>Porta-escovas, Regulador de voltagem, Rotor, Estator...</p>
-								<button id="close-one" style="width: 100%;">X</button>
+								<button id="close-one">X</button>
 							</dialog>						
 						</article>
 						
-						<article style="cursor: pointer;">
-							<button id="article-two" style="all: inherit; height: 100%; width: 100%;">
+						<article>
+							<button id="article-two">
 								<a class="image featured">
 									<img src="images/motordepartida.jpg" alt=""/>
 								</a>
@@ -109,17 +130,17 @@
 								<p><a>O motor de partida serve para iniciar o funcionamento do motor quando ainda está desligado.</a></p>
 							</button>
 							<!-- Modal 2 -->
-							<dialog id="dialog-two" style="margin-bottom: auto;">
+							<dialog id="dialog-two">
 								<h4>Diagnóstico</h4>
 								<p>Verificar o sistema elétrico (bateria, cabos, relés...), além de avaliar o funcionamento do próprio motor de partida.</p>
 								<h4>Peças de Reposição</h4>
 								<p>Solenóide, Porta-escovas, Bendix e em alguns casos o próprio Motor de partida em si. </p>
-								<button id="close-two" style="width: 100%;">X</button>
+								<button id="close-two">X</button>
 							</dialog>
 						</article>
 
-						<article style="cursor: pointer;">
-							<button id="article-three" style="all: inherit; height: 100%; width: 100%;">
+						<article>
+							<button id="article-three">
 								<a class="image featured">
 									<img src="images/bateria.jpg" alt=""/>
 								</a>
@@ -129,17 +150,17 @@
 								<p><a>A bateria do carro serve para dar a partida no veículo e também para alimentar o sistema elétrico.</a></p>
 							</button>
 							<!-- Modal 3 -->
-							<dialog id="dialog-three" style="margin-bottom: auto;">
+							<dialog id="dialog-three">
 								<h4>Diagnóstico</h4>
 								<p>Medir a voltagem de saída para determinar a carga e amperagem para determinar capacidade da bateria.</p>
 								<h4>Atenção!</h4>
 								<p>Alternador defeituoso, Cabos corroídos ou soltos, e Falhas no sistema de carga e consumo podem danificar a bateria.</p>
-								<button id="close-three" style="width: 100%;">X</button>
+								<button id="close-three">X</button>
 							</dialog>
 						</article>
 
-						<article style="cursor: pointer;">
-							<button id="article-four" style="all: inherit; height: 100%; width: 100%;">
+						<article>
+							<button id="article-four">
 								<a class="image featured">
 									<img src="images/lampadaH4.jpg" alt=""/>
 								</a>
@@ -149,17 +170,17 @@
 								<p><a>A lâmpada do carro danificada acarreta em multa de R$127,69 mais cinco pontos na CNH.</a></p>
 							</button>
 							<!-- Modal 4 -->
-							<dialog id="dialog-four" style="margin-bottom: auto;">
+							<dialog id="dialog-four">
 								<h4>Diagnóstico</h4>
 								<p>Verificar visualmente a lâmpada e componentes elétricos como fusíveis e fiação, além de testar a continuidade do circuito.</p>
 								<h4>Atenção!</h4>
 								<p>Uma lâmpada defeituosa pode afetar a segurança do veículo, desde a visibilidade até mesmo pode ocasionar um curto-circuito ou sobrecarga.</p>
-								<button id="close-four" style="width: 100%;">X</button>
+								<button id="close-four">X</button>
 							</dialog>
 						</article>
 
-						<article style="cursor: pointer;">
-							<button id="article-five" style="all: inherit; height: 100%; width: 100%;">
+						<article>
+							<button id="article-five">
 								<a class="image featured">
 									<img src="images/acessorios.jpg" alt=""/>
 								</a>
@@ -169,17 +190,17 @@
 								<p><a>A troca dos acessórios é essencial para evitar desgastes de outros componentes.</a></p>
 							</button>
 							<!-- Modal 5 -->
-							<dialog id="dialog-five" style="margin-bottom: auto;">
+							<dialog id="dialog-five">
 								<h4>Diagnóstico</h4>
 								<p>Inspecionar visualmente e fazer testes elétricos para identificar falhas ou mau funcionamento dos componentes.</p>
 								<h4>Peças de Reposição</h4>
 								<p>Palhetas do limpador de para-brisas, Buzinas, Tomadas de engate, Alarme, Vidros e Travas elétricas...</p>
-								<button id="close-five" style="width: 100%;">X</button>
+								<button id="close-five">X</button>
 							</dialog>
 						</article>
 
-						<article style="cursor: pointer;">
-							<button id="article-six" style="all: inherit; height: 100%; width: 100%;">
+						<article>
+							<button id="article-six">
 								<a class="image featured">
 									<img src="images/fios.jpg" alt=""/>
 								</a>
@@ -189,17 +210,17 @@
 								<p><a>Um carro popular tem 400 cabos e um premium pode ter mais 800 cabos em sua rede elétrica.</a></p>
 							</button>
 							<!-- Modal 6 -->
-							<dialog id="dialog-six" style="margin-bottom: auto;">
+							<dialog id="dialog-six">
 								<h4>Diagnóstico</h4>
 								<p>Inspecionar visualmente além do uso do multímetro para testar a continuidade e resistência elétrica do sistema.</p>
 								<h4>Atenção!</h4>
 								<p>O Desgaste, Danos por atrito, Corrosão e Conexões soltas podem levar a mau funcionamento dos sistemas elétricos do veículo.</p>
-								<button id="close-six" style="width: 100%;">X</button>
+								<button id="close-six">X</button>
 							</dialog>
 						</article>
 
-						<article style="cursor: pointer;">
-							<button id="article-seven" style="all: inherit; height: 100%; width: 100%;">
+						<article>
+							<button id="article-seven">
 								<a class="image featured">
 									<img src="images/eletricageral.jpg" alt=""/>
 								</a>
@@ -209,17 +230,17 @@
 								<p><a>É importante verificar tudo que pode ser medido ou avaliado para boa atuação dos itens elétricos.</a></p>
 							</button>
 							<!-- Modal 7 -->
-							<dialog id="dialog-seven" style="margin-bottom: auto;">
+							<dialog id="dialog-seven">
 								<h4>Diagnóstico</h4>
 								<p>Geralmente envolve verificar Fusíveis, Cabos, Bateria e Componentes eletrônicos para identificar e corrigir falhas no sistema elétrico.</p>
 								<h4>Atenção!</h4>
 								<p>Falta de manutenção elétrica resulta em problemas como falhas na partida, no sistema de iluminação, mau funcionamento de acessórios e até danos a componentes eletrônicos mais sensíveis.</p>
-								<button id="close-seven" style="width: 100%;">X</button>
+								<button id="close-seven">X</button>
 							</dialog>							
 						</article>
 
-						<article style="cursor: pointer;">
-							<button id="article-eight" style="all: inherit; height: 100%; width: 100%;">
+						<article>
+							<button id="article-eight">
 								<a href="#endereco" class="image featured" class="scrolly">
 									<img src="images/muitomais.jpg" alt=""/>
 								</a>
@@ -241,12 +262,12 @@
 							width="100%" style="border:0; height:50vh" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 						</a>
 						<header>
-							<h2 style="margin-bottom: 1em;"><a href="https://maps.app.goo.gl/qmiQGgLFV2yeXSPq5" target="_blank">Nossa Localização</a></h2>
+							<h2 id="localH2"><a href="https://maps.app.goo.gl/qmiQGgLFV2yeXSPq5" target="_blank">Nossa Localização</a></h2>
 							<p>
-								Estamos atendendo na <strong>Rua dos Andradas, nº.7-33, Vila Falcão, Bauru/SP.</strong>
+								Estamos atendendo na <strong><a href="https://maps.app.goo.gl/qmiQGgLFV2yeXSPq5" target="_blank">Rua dos Andradas, nº.7-33, Vila Falcão, Bauru/SP.</a></strong>
 							</p>
 						</header>
-						<p style="text-align: center;">
+						<p id="horarioP">
 							Nosso horário de funcionamento é de <strong>segunda a sexta-feira</strong> das <strong>8 horas às 18 horas</strong>.
 							Aos <strong>sábados</strong> das <strong>8 horas ao meio dia</strong>.
 						</p>
@@ -255,8 +276,8 @@
 
 				<div class="wrapper style2">
 					<article id="sobre" class="container special">
-						<a href="#h2SobreNos" class="scrolly" class="image featured" style="display: flex; justify-content: center; margin-top: 1em; margin-bottom: 2em;">
-							<img class="image featured" src="images/sobre.jpeg" alt="" style="height:50vh; width:50%;"/>
+						<a href="#h2SobreNos" id="sobreNosA" class="scrolly" class="image featured">
+							<img id="sobreNosImg" class="image featured" src="images/sobre.jpeg" alt=""/>
 						</a>
 						<header>
 							<h2 id="h2SobreNos">Sobre Nós</h2>
@@ -264,7 +285,7 @@
 								<strong>Visite-nos</strong> hoje mesmo e experimente o <strong>atendimento diferenciado</strong> que nos tornou <strong>referência na região.</strong>
 							</p>
 						</header>
-						<p style="margin-bottom: 0;">
+						<p id="sobreNosP">
 							Há mais de 40 anos, a Auto Elétrica do Turco tem sido referência em atendimento e serviços automotivos de qualidade. 
 							Nosso compromisso com a excelência e a satisfação do cliente nos tornou uma das melhores auto elétricas da região.<br><br>
 							Contamos com uma equipe de profissionais experientes e qualificados que possuem conhecimento técnico avançado em 
@@ -273,7 +294,7 @@
 								a precisão e a rapidez em nossos serviços.</span><br><br>
 								<span class="mais"> Na Auto Elétrica do Turco, oferecemos uma ampla gama de serviços, desde manutenções preventivas até reparos complexos. 
 								Entre outros serviços, temos disponíveis:</span><br>
-								<ul class="mais" style="list-style: inside;">
+								<ul id="maisUl" class="mais">
 									<li>Conserto de alternadores e motores de partida;</li>
 									<li>Troca de baterias;</li>
 									<li>Diagnósticos de sistema elétrico;</li>
@@ -287,32 +308,11 @@
 								visitar a Auto Elétrica do Turco. Com mais de 40 anos de tradição e qualidade, nossos serviços irão superar suas expectativas.<br><br> 
 								Aguardamos sua visita!</span>
 						</p>
-						<footer style="margin-top: 0;">
+						<footer id="maisFooter">
 							<a href="#plus" class="scrolly">
-								<button id="btnLeiaMais" style="width: 100%; padding: 1.3em 6em 1.3em 6em; font-weight: bold;" onclick="leiaMais()">Leia Mais</button>
+								<button id="btnLeiaMais" onclick="leiaMais()">Leia Mais</button>
 							</a>
 						</footer>
-						<script>
-							function leiaMais() {
-								var pontos = document.getElementById('pontos');
-								var maisTexto = document.getElementsByClassName('mais');
-								var btnLeiaMais = document.getElementById('btnLeiaMais');
-					
-								if (pontos.style.display === 'none') {
-									for (var i = 0; i < maisTexto.length; i++) {
-										maisTexto[i].style.display = 'none';
-									}
-									pontos.style.display = 'inline';
-									btnLeiaMais.textContent = 'Leia Mais';
-								} else {
-									for (var i = 0; i < maisTexto.length; i++) {
-										maisTexto[i].style.display = 'inline';
-									}
-									pontos.style.display = 'none';
-									btnLeiaMais.textContent = 'Leia Menos';
-								}
-							}
-						</script>
 					</article>
 				</div>
 
@@ -326,7 +326,7 @@
 							</p>
 						</header>
 						<form id="formToWhatsApp">
-							<div class="container" style="margin-bottom: 1em;">
+							<div class="container containerForm">
 								<div class="row">
 									<div class="col-6">	
 										<label for="nome">Nome: </label>
@@ -336,6 +336,7 @@
 										<label for="telefone">Telefone: </label>
 										<input type="text" name="telefone" id="campoTelefone" maxlength="15" placeholder="(XX)XXXXX-XXXX" required onkeyup="handlePhone(event)">
 										<script>
+											// Mask Phone Number Engine
 											const handlePhone = (event) => {
 												let input = event.target
 												input.value = phoneMask(input.value)
@@ -351,7 +352,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="container" style="margin-bottom: 1em;">
+							<div class="container containerForm">
 								<div class="row">
 									<div class="col-6">	
 										<label for="marca">Marca: </label>
@@ -366,10 +367,9 @@
 							<label for="mensagem">Escreva sua mensagem: </label>
 							<textarea name="mensagem" id="campoMensagem" placeholder="Escreva sua mensagem aqui..."></textarea>
 							<div class="g-recaptcha" data-sitekey="6Lc9j6soAAAAAES1ft1WwdFWDgpO2MlKokD4sTrh" data-callback="onSubmit"></div>
-							<input type="submit" value="Enviar!" style="width: 100%; font-weight: bold;">							
+							<input type="submit" value="Enviar!" id="formButton">							
 							<script>
-								grecaptcha.execute();
-
+								// Form Engine
 								document.getElementById('formToWhatsApp').addEventListener('submit', function(event) {
         	    						event.preventDefault(); // Previne o envio do formulário padrão
 								
@@ -436,8 +436,8 @@
 						<!-- Copyright -->
 						<div class="copyright">
 							<ul class="menu">
-								<li style="font-weight: bold; color: rgba(143, 0, 0, 0.7); text-align: end;">&copy; Auto Elétrica do Turco. All rights reserved. <br><br><br> Designed by:  </li>								
-								<li style="text-align: start;">	
+								<li id="copyAET">&copy; Auto Elétrica do Turco. All rights reserved. <br><br><br> Designed by:  </li>								
+								<li id="copyKadu">	
 									<a href="https://api.whatsapp.com/send/?phone=5514988124334&text=Olá!%20Vi%20o%20site%20que%20você%20desenvolveu%20para%20a%20Auto%20Elétrica%20do%20Turco!%20&app_absent=0" 
 									target="_blank">
 												
@@ -460,9 +460,7 @@
 									</a>
 										
 									<a href="https://api.whatsapp.com/send/?phone=5514988124334&text=Olá!%20Vi%20o%20site%20que%20você%20desenvolveu%20para%20a%20Auto%20Elétrica%20do%20Turco!%20&app_absent=0"
-									 target="_blank"
-									  style="font-weight: bold; color: rgba(143, 0, 0, 0.7);"
-									>
+									 id="copyNome" target="_blank">
 										Kadu Cury
 									</a>
 								</li>
@@ -520,6 +518,30 @@
 				var modalSeven = document.getElementById('dialog-seven'); var openModalSeven = document.getElementById('article-seven'); var buttonCloseSeven = document.getElementById('close-seven');
 				openModalSeven.onclick = function() {modalSeven.showModal();}
 				buttonCloseSeven.onclick = function() {modalSeven.close();};
+
+				// Leia Mais Engine
+				function leiaMais() {
+					var pontos = document.getElementById('pontos');
+					var maisTexto = document.getElementsByClassName('mais');
+					var btnLeiaMais = document.getElementById('btnLeiaMais');
+		
+					if (pontos.style.display === 'none') {
+						for (var i = 0; i < maisTexto.length; i++) {
+							maisTexto[i].style.display = 'none';
+						}
+						pontos.style.display = 'inline';
+						btnLeiaMais.textContent = 'Leia Mais';
+					} else {
+						for (var i = 0; i < maisTexto.length; i++) {
+							maisTexto[i].style.display = 'inline';
+						}
+						pontos.style.display = 'none';
+						btnLeiaMais.textContent = 'Leia Menos';
+					}
+				}
+
+				// Recaptcha Engine
+				grecaptcha.execute();
 			</script>
 	</body>
 </html>
