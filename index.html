@@ -228,9 +228,9 @@
 			<!-- Main/Address -->
 				<div class="wrapper style2">
 					<article id="endereco" class="container special">
-						<a href="#" class="image featured" style="display: flex; margin-top: 1em; margin-bottom: 2em;">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.710162054131!2d-49.09264512545504!3d-22.326798717399203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bf664fc7c96437%3A0x67158a1975f1a1ba!2sR.%20dos%20Andradas%2C%207-33%20-%20Vila%20Souto%2C%20Bauru%20-%20SP%2C%2017050-200!5e0!3m2!1spt-BR!2sbr!4v1695422448763!5m2!1spt-BR!2sbr"
-							width="100%" style="border:0; height:50vh" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+						<a href="#"  id="mapsA" class="image featured">
+							<iframe id="mapsIframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.710162054131!2d-49.09264512545504!3d-22.326798717399203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bf664fc7c96437%3A0x67158a1975f1a1ba!2sR.%20dos%20Andradas%2C%207-33%20-%20Vila%20Souto%2C%20Bauru%20-%20SP%2C%2017050-200!5e0!3m2!1spt-BR!2sbr!4v1695422448763!5m2!1spt-BR!2sbr"
+							width="100%" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 						</a>
 						<header>
 							<h2 id="localH2"><a href="https://maps.app.goo.gl/qmiQGgLFV2yeXSPq5" target="_blank">Nossa Localização</a></h2>
@@ -331,6 +331,7 @@
 
 			<!-- Footer -->
 			<div id="footer">
+				<div id="comentariosGoogle"></div>
 				<hr />
 				<div class="row">
 					<div class="col-12">
@@ -354,32 +355,27 @@
 						<div class="copyright">
 							<ul class="menu">
 								<li id="copyAET">&copy; Auto Elétrica do Turco. All rights reserved. <br><br><br> Designed by:  </li>								
-								<li id="copyKadu">	
-									<a href="https://api.whatsapp.com/send/?phone=5514988124334&text=Olá!%20Vi%20o%20site%20que%20você%20desenvolveu%20para%20a%20Auto%20Elétrica%20do%20Turco!%20&app_absent=0" 
-									target="_blank">
-												
-										<span class="label" style="margin: 0 auto; display: block; border: 5px solid rgba(143, 0, 0, 0.7); border-radius: 50%; height: 48px; width: 48px;
-										display: flex;	justify-content: center; align-items: center;">
-											<span class="label" style="margin: 0 auto; display: block; border: 5px solid rgba(255, 255, 255); border-radius: 50%; height: 45px; width: 45px;
-											display: flex;	justify-content: center; align-items: center;">
-												<span class="label" style="margin: 0 auto; display: block; border: 5px solid rgba(143, 0, 0, 0.7); border-radius: 50%; height: 42px; width: 42px;
-												display: flex;	justify-content: center; align-items: center;">
-													<span class="label" style="margin: 0 auto; display: block; border: 5px solid rgb(255, 255, 255); border-radius: 50%; height: 39px; width: 39px;
-													display: flex;	justify-content: center; align-items: center;">
-														<span class="label" style="margin: 0 auto; display: block; border: 5px solid rgba(143, 0, 0, 0.7); border-radius: 50%; height: 36px; width: 36px;
-														display: flex;	justify-content: center; align-items: center;">
-															<img src="images/profile02.jpg" alt="" srcset="" style="margin: 0 auto; border-radius: 50%; width: 32px; height: 32px; align-items: baseline;">
+								<li id="copyKadu">
+									<div id="myLogo">	
+										<a href="https://api.whatsapp.com/send/?phone=5514988124334&text=Olá!%20Vi%20o%20site%20que%20você%20desenvolveu%20para%20a%20Auto%20Elétrica%20do%20Turco!%20&app_absent=0" 
+										target="_blank">
+											<span id="logoCircleOne" class="label logoCircle coloredCircle redCircle">										
+												<span id="logoCircleTwo" class="label logoCircle coloredCircle whiteCircle">
+													<span id="logoCircleThree" class="label logoCircle coloredCircle redCircle">
+														<span id="logoCircleFour" class="label logoCircle coloredCircle whiteCircle">
+															<span id="logoCircleFive" class="label logoCircle coloredCircle redCircle">
+																<img id="logoImg" class="logoCircle" src="images/profile02.jpg" alt="" srcset="">
+															</span>
 														</span>
 													</span>
 												</span>
 											</span>
-										</span>
-									</a>
-										
-									<a href="https://api.whatsapp.com/send/?phone=5514988124334&text=Olá!%20Vi%20o%20site%20que%20você%20desenvolveu%20para%20a%20Auto%20Elétrica%20do%20Turco!%20&app_absent=0"
-									 id="copyNome" target="_blank">
-										Kadu Cury
-									</a>
+										</a>
+										<a href="https://api.whatsapp.com/send/?phone=5514988124334&text=Olá!%20Vi%20o%20site%20que%20você%20desenvolveu%20para%20a%20Auto%20Elétrica%20do%20Turco!%20&app_absent=0"
+										 id="logoNome" target="_blank">
+											Kadu Cury
+										</a>
+									</div>
 								</li>
 							</ul>
 						</div>

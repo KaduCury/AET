@@ -2642,6 +2642,8 @@ input, select, textarea {
 	#close-one, #close-two, #close-three, #close-four, #close-five, #close-six, #close-seven {
 		width: 100%;
 	}
+	#mapsA {display: flex; margin-top: 1em; margin-bottom: 2em;}
+	#mapsIframe {border:0; height:50vh}
 	#localH2 {margin-bottom: 1em;}
 	#horarioP {text-align: center;}
 	#sobreNosA {display: flex; justify-content: center; margin-top: 1em; margin-bottom: 2em;}
@@ -2654,10 +2656,72 @@ input, select, textarea {
 	.containerForm {margin-bottom: 1em;}
 	#formButton {width: 100%; font-weight: bold;}
 	div.g-recaptcha div {margin: 1em auto;}
-	#copyAET {font-weight: bold; color: rgba(143, 0, 0, 0.7); text-align: end;}
-	#copyKadu {text-align: start;}
-	#copyNome {font-weight: bold; color: rgba(143, 0, 0, 0.7)!important;}
-
+	#copyAET {font-weight: bold; color: rgba(143, 0, 0); text-align: end;}
+	#copyKadu {text-align: start;}	
+	
+/* My Logo */
+	#logoCircleOne {height: 48px; width: 48px; box-shadow:  0.5px 0.5px 2px #949494, -0.5px -0.5px 2px #ffffff;}
+	#logoCircleTwo {height: 45px; width: 45px;}
+	#logoCircleThree {height: 42px; width: 42px;}
+	#logoCircleFour {height: 39px; width: 39px;}
+	#logoCircleFive {height: 36px; width: 36px;}
+	#logoImg {height: 32px; width: 32px; align-items: baseline;}
+	.redCircle {border: 5px solid rgba(143, 0, 0, 0.7);}
+	.whiteCircle {border: 5px solid rgba(255, 255, 255);}
+	.coloredCircle {display: block; display: flex;	justify-content: center; align-items: center;}
+	.logoCircle {margin: 0 auto; border-radius: 50%; box-shadow: 0px 0px 2.5px grey;}
+	#logoNome {font-weight: bold; color: rgba(143, 0, 0)!important; display: flex; justify-content: center;}
+	/* Logo Animation */
+	#myLogo:hover {animation-name: pulsar; animation-duration: 0.5s; animation-timing-function: ease-in-out;
+					animation-iteration-count: infinite; animation-direction: alternate;}
+	#myLogo:hover #logoCircleOne {animation-name: hoverCircleOne; animation-duration: 1s; animation-timing-function: ease-in-out;
+					animation-iteration-count: infinite; animation-direction: normal;}	
+	#myLogo:hover #logoCircleTwo {animation-name: hoverCircleTwo; animation-duration: 1s; animation-timing-function: ease-in-out;
+					animation-iteration-count: infinite; animation-direction: normal;}	
+	#myLogo:hover #logoCircleThree {animation-name: hoverCircleThree; animation-duration: 1s; animation-timing-function: ease-in-out;
+					animation-iteration-count: infinite; animation-direction: normal;}	
+	#myLogo:hover #logoCircleFour {animation-name: hoverCircleFour; animation-duration: 1s; animation-timing-function: ease-in-out;
+					animation-iteration-count: infinite; animation-direction: normal;}	
+	#myLogo:hover #logoCircleFive {animation-name: hoverCircleFive; animation-duration: 1s; animation-timing-function: ease-in-out;
+					animation-iteration-count: infinite; animation-direction: normal;}
+	#myLogo:hover #logoNome {-webkit-animation: text-pop-up-top 0.5s steps(10, start) alternate infinite;
+							animation: text-pop-up-top 0.5s steps(10, start) alternate infinite;}											
+	
+	@keyframes pulsar {	0%{transform: scale(1);}
+						100%{transform: scale(1.075);}}
+	@keyframes hoverCircleOne{ 0%{transform: scale(1); opacity: 1;}
+						50%{transform: scale(1.1); opacity: 0.8;}}
+	@keyframes hoverCircleTwo{ 10%{transform: scale(0.995); opacity: 1;}
+						60%{transform: scale(1.08); opacity: 0.8;}}
+	@keyframes hoverCircleThree{ 20%{transform: scale(0.98); opacity: 1;}
+						70%{transform: scale(1.06); opacity: 0.8;}}
+	@keyframes hoverCircleFour{ 30%{transform: scale(0.95); opacity: 1;}
+						80%{transform: scale(1.04); opacity: 0.8;}}
+	@keyframes hoverCircleFive{ 40%{transform: scale(0.89); opacity: 1;}
+						90%{transform: scale(1.02); opacity: 0.8;}}
+	@-webkit-keyframes text-pop-up-top { 0% {-webkit-transform: translateY(0);
+				  							transform: translateY(0);
+		  									-webkit-transform-origin: 50% 50%;
+				  							transform-origin: 50% 50%;
+		  									text-shadow: none;}
+										100% {-webkit-transform: translateY(-50px);
+				  							transform: translateY(-50px);
+		  									-webkit-transform-origin: 50% 50%;
+				  							transform-origin: 50% 50%;
+											opacity: 0.5;
+		  									text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);}}
+	@keyframes text-pop-up-top { 0% {-webkit-transform: translateY(0);
+			  						transform: translateY(0);
+	  								-webkit-transform-origin: 50% 50%;
+			  						transform-origin: 50% 50%;
+	  								text-shadow: none;}
+								100% {-webkit-transform: translateY(-50px);
+			  						transform: translateY(-50px);
+	  								-webkit-transform-origin: 50% 50%;
+			  						transform-origin: 50% 50%;
+									opacity: 0.5;
+	  								text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);}}
+						  
 /* Wide */
 
 	@media screen and (max-width: 1680px) {
